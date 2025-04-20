@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CareerBot - Find Your Dream Job</title>
+  <style>
+    /* General Reset */
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      height: 100%;
+    }
+
+    /* Background Gradient */
+    body {
+      background: linear-gradient(135deg, #4e6d7c, #2a3d6b); /* Gradient */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: #fff;
+      text-align: center;
+      height: 100vh;
+      padding: 20px;
+    }
+
+    /* Container for Content */
+    .content-container {
+      max-width: 900px;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 40px 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(10px);
+    }
+
+    h1 {
+      font-size: 42px;
+      color: #ffdd57; /* Bright yellow for header */
+      font-weight: 600;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    p.cta {
+      font-size: 20px;
+      margin-bottom: 30px;
+      color: #50fa7b; /* Green for CTA */
+      font-weight: 500;
+      text-transform: capitalize;
+    }
+
+    .description {
+      color: #d3d3d3;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    /* Dialogflow Messenger Styles */
+    df-messenger {
+      --df-messenger-button-titlebar-color: #ffdd57; /* Bright yellow for title bar */
+      --df-messenger-chat-background-color: #2b2b2b; /* Dark background for chat */
+      --df-messenger-send-icon: #ffdd57; /* Yellow send icon */
+      --df-messenger-minimized-chat-background-color: #50fa7b; /* Green for minimized chat */
+      --df-messenger-minimized-chat-icon-color: #2b2b2b; /* Dark color for minimized icon */
+      
+      /* Custom styles for readability of chatbot messages */
+      --df-messenger-bubble-background-color: #4e6d7c; /* Lighter blue bubble */
+      --df-messenger-bubble-font-color: #ffffff; /* White text inside the bubble */
+      --df-messenger-agent-message-bubble-background-color: #50fa7b; /* Light green for agent's messages */
+      --df-messenger-agent-message-font-color: #2b2b2b; /* Dark text color inside the agent's message bubble */
+      
+      /* Set text color for both user and agent messages */
+      --df-messenger-user-message-font-color: #ffffff; /* White font for user messages */
+      --df-messenger-agent-message-font-color: #2b2b2b; /* Dark font for agent messages */
+      
+      /* Ensuring messages are visible */
+      --df-messenger-text-color: #fff; /* Text color inside chat bubbles */
+    }
+
+    .footer {
+      margin-top: 40px;
+      font-size: 14px;
+      color: #aaa;
+    }
+
+    .footer a {
+      color: #ffdd57; /* Bright yellow for footer link */
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    .info-section {
+      margin-top: 50px;
+      padding: 20px;
+      background-color: #333;
+      border-radius: 8px;
+    }
+
+    .info-section h2 {
+      font-size: 26px;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .info-section ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    .info-section li {
+      color: #ccc;
+      font-size: 18px;
+      margin: 10px 0;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="content-container">
+    <h1>Welcome to CareerBot 🎓</h1>
+    <p class="cta">Your guide to finding your dream job! Let’s get started.</p>
+    
+    <div class="description">
+      <p>CareerBot is here to help you explore the best career opportunities, get career tips, and book career counseling sessions. Whether you're searching for a job or looking for advice, we're here for you every step of the way. Ask away!</p>
+    </div>
+
+    <!-- Dialogflow Messenger Integration -->
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <df-messenger
+      intent="WELCOME"
+      chat-title="CareerBot"
+      agent-id="307ebf38-8dcb-4253-9cea-fe05aa1b22ed"
+      language-code="en"
+    ></df-messenger>
+
+    <div class="info-section">
+      <h2>How CareerBot Can Help You:</h2>
+      <ul>
+        <li>🔍 Find Your Dream Job</li>
+        <li>💡 Get Career Tips and Advice</li>
+        <li>📅 Book Career Counseling Sessions</li>
+        <li>📈 Track Your Career Progress</li>
+      </ul>
+    </div>
+
+    <p class="footer">
+      Need assistance? <a href="mailto:support@careerbot.com">Contact Support</a>
+    </p>
+  </div>
+
+</body>
+</html>
