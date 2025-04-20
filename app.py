@@ -1,6 +1,7 @@
 from flask import Flask, request, jsonify
 import requests
 import random
+import os  # Import os to read environment variables
 
 app = Flask(__name__)
 
@@ -95,4 +96,5 @@ def webhook():
         })
 
 if __name__ == "__main__":
-    app.run(port=5000)
+    port = int(os.environ.get("PORT", 5000))  # Use the environment variable for port
+    app.run(host="0.0.0.0", port=port)  # Listen on all interfaces, Render assigns a dynamic port
